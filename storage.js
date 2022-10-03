@@ -9,8 +9,8 @@ const store = {
     1: { name: "Lukas", age: "32"}
 }
 
-const byAge = (age) => {
-    return Object.values().filter(it => it.age === age)
+const getByAge = (age) => {
+    return Object.values(store).filter(it => it.age === age)
 }
 
 const get = (id) => {
@@ -36,4 +36,4 @@ const remove = (id) => {
     delete store[id]
 }
 
-export default {get, update, insert, remove, byAge}
+export default {get, update, insert, remove, getByAge}
