@@ -15,7 +15,7 @@ const getByAge = (age) => {
 
 const get = (id) => {
     if (!id) {
-        return store
+        return Object.keys(store).map(key => ({...store[key], id: key}))
     }
     return store[id]
 }
