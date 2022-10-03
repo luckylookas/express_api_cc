@@ -1,3 +1,10 @@
+# start this project
+
+```
+npm i
+npm run-script dev
+```
+
 # setup nodejs
 
 1) install nvm

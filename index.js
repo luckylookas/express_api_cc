@@ -6,6 +6,9 @@ const jsonParser = bodyParser.json()
 const api = express()
 
 api.get('/people', (req, res) => {
+    if (req.query.age) {
+        return res.json(store.getByAge(req.query.age))
+    }
     res.json(store.get())
 })
 
